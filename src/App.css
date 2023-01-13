@@ -1,3 +1,7 @@
+:root {
+  --primary-blue: #4181bf;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,63 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  background-color: var(--primary-blue);
+  margin: 0;
+  width: 100vw;
+  height: 5vh;
+  padding: 1vh 1vw;
+  font-size: 3rem;
+  color: white;
+}
+
+.header p{
+  margin: 0;
+  font-weight: bold;
+}
+
+.header p span {
+  font-weight: lighter;
+}
+
+.position-container {
+  border-top: darkgrey 1px solid;
+  margin-top: 1vh;
+}
+
+.position-title-location {
+  color: var(--primary-blue);
+  text-align: left;
+}
+
+.position-location {
+  float: right;
+  color: grey;
+}
+
+.position-company-type {
+  color: var(--primary-blue);
+  text-align: left;
+}
+
+.position-company {
+  color: grey;
+  text-align: left;
+}
+
+.position-type {
+  color: #22c226;
+  text-align: left;
+}
+
+.position-created {
+  text-align: right;
+  float: right;
+  color: darkgrey;
+}
+
+.positions-page {
+  margin: 0 5vh;
 }
