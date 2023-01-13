@@ -14,7 +14,9 @@ const initialState: Positions = {
     company_url: '',
     location: '',
     title: '',
-    description: ''
+    description: '',
+    how_to_apply: '',
+    company_logo: ''
   }
 };
 
@@ -22,6 +24,12 @@ const BASE_URL = 'http://dev3.dansmultipro.co.id';
 
 export const fetchPositions = createAsyncThunk('positions/fetchPositions', async () => {
   const response = await fetch(`${BASE_URL}/api/recruitment/positions.json?page=1`);
+  const data = await response.json();
+  return data;
+});
+
+export const fetchPosition = createAsyncThunk('positions/fetchPosition', async (id : string) => {
+  const response = await fetch(`${BASE_URL}/api/recruitment/positions/${id}`);
   const data = await response.json();
   return data;
 });
@@ -57,6 +65,18 @@ const positionsSlice = createSlice({
         state.positions = action.payload;
       })
       .addCase(searchPositions.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(fetchPosition.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchPosition.fulfilled, (state, action) => {
+        state.loading = false;
+        console.log('trace', action.payload);
+        state.position = action.payload;
+      })
+      .addCase(fetchPosition.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });

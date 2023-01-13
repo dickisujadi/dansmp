@@ -70,6 +70,11 @@
   text-align: left;
 }
 
+.position-title-location a {
+  text-decoration: none;
+  color: unset;
+}
+
 .position-location {
   float: right;
   color: grey;
@@ -138,4 +143,16 @@
   border: none;
   color: white;
   border-radius: 5px;
+}
+
+.details-box-container {
+  margin: 2vh 2vw;
+  background-color: white;
+}
+
+.back-button {
+  margin: 2vh 2vw;
+  color: var(--primary-blue);
+  text-decoration: none;
+  padding-top: 5vh;
 }
