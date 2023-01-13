@@ -150,6 +150,15 @@
   background-color: white;
 }
 
+.details-box-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-box-description {
+  width: 70%;
+}
+
 .back-button {
   margin: 2vh 2vw;
   color: var(--primary-blue);

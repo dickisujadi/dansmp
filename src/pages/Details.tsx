@@ -29,7 +29,10 @@ const Details = () => {
             <div>
                 <h1>{position.title}</h1>
             </div>
-            <div dangerouslySetInnerHTML={{__html: position.description}} />
+            <div className='details-box-item'>
+              <div dangerouslySetInnerHTML={{__html: position.description}} className='details-box-description'/>
+              <img src={position.company_logo} alt="" />
+            </div>
         </div>
     </>
   );
