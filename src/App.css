@@ -97,5 +97,45 @@
 }
 
 .positions-page {
-  margin: 0 5vh;
+  margin: 3vh 5vh 0 5vh;
+  background-color: white;
+  padding: 2vh;
+}
+
+.job-search {
+  margin: auto;
+  display: block;
+  width: 96vw;
+}
+
+.input-box-container {
+  margin: 2vh 2vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.input-box-item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.input-box {
+  margin-right: 1vw;
+  height: 3vh;
+}
+
+.search-item {
+  margin-top: 3vh;
+  margin-right: .5vw;
+  height: 3vh;
+}
+
+.search-button {
+  height: 3vh;
+  background-color: #a9b1b8;
+  width: 10%;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }

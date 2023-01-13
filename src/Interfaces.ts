@@ -1,7 +1,8 @@
 export interface Positions {
-    positions: any;
+    positions: [];
     loading: boolean;
     error: any;
+    position: Position;
 }
 
 export interface Position {
@@ -15,3 +16,9 @@ export interface Position {
     title: string;
     description: string;
 }
+
+export interface Search { 
+    jobDescription: string;
+    location: string; 
+    fullTimeOnly: boolean; 
+  }
